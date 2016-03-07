@@ -1,4 +1,4 @@
-Patient ID,Date,Medication,Patient Days ID,DOT ID,LOT ID,Year Month
+patient_id,date,medication,pt_days_id,dot_id,lot_id,year_mo
 1,2/11/2015,,142046,#N/A,#N/A,2015-02
 2,8/16/2015,,242232,#N/A,#N/A,2015-08
 3,8/11/2015,,342227,#N/A,#N/A,2015-08
