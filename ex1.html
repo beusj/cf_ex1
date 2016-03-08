@@ -67,8 +67,8 @@
 			.columns([
             			'date',
             			'totPtDay',
-            			function(d) {return d.date};,
-            			function(d) {return d.group().size()};
+            			function(d) {return d.date;},
+            			function(d) {return d.group().size();}
         		])
 		dc.renderAll();
         	});
