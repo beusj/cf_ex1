@@ -65,10 +65,8 @@
 			.width(768)
 			.height(480)
 			.columns([
-            			'date',
-            			'totPtDay',
-            			function(d) {return d.value.totPtDay},
-            			function(d) {return d.group().size()}
+            			function(d) {return d.key},
+            			function(d) {return d.value}
         		])
 		dc.renderAll();
         	});
