@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF8"> 
-        <title>Page Template</title>
+        <title>Cross Filter Test</title>
 		<script type="text/javascript" src="javascripts/d3.js"></script>
 		<script type="text/javascript" src="javascripts/crossfilter.js"></script>
 		<script type="text/javascript" src="javascripts/dc.js"></script>
@@ -67,7 +67,7 @@
 			.columns([
             			'date',
             			'totPtDay',
-            			function(d) {return d.date};
+            			function(d) {return d.date};,
             			function(d) {return d.group().size()};
         		])
 		dc.renderAll();
