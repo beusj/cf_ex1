@@ -58,8 +58,7 @@
 		dTable
 		 	.dimension(dateDim)
 		        .group(function (d) {
-		            var format = d3.format('02d');
-		            return d.dd.getFullYear() + '/' + format((d.dd.getMonth() + 1));
+		            return d.dd.getFullYear();
 		        })
 			.width(768)
 			.height(480)
