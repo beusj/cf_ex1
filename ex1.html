@@ -58,12 +58,10 @@
 		//	.group(year_total)
 		//	.innerRadius(30);
 		dTable
-		 	.dimension(all)
+		 	.dimension(dateDim)
 		        .group(function (d) {
 		            return d.dd.getFullYear();
 		        })
-			.width(768)
-			.height(480)
 			.columns([
 				'date',
 				'totPtDay'
