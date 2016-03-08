@@ -45,7 +45,7 @@
 			var maxDate = dateDim.top(1)[0].date;
 			
 			var dimPtDay = ndx.dimension(function(d) {return d.pt_days_id;});
-			var totPtDay = dimPtDay.group().reduce();
+			var totPtDay = dimPtDay.group().size();
 
 		//var yearRingChart   = dc.pieChart("#chart-ring-year");
 		var yearDim  = ndx.dimension(function(d) {return +d.Year;});
@@ -58,7 +58,7 @@
 		//	.group(year_total)
 		//	.innerRadius(30);
 		dTable
-		 	.dimension(dimPtDay)
+		 	.dimension(totPtDay)
 		        .group(function (d) {
 		            return d.dd.getFullYear();
 		        })
