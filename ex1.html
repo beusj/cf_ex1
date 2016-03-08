@@ -43,7 +43,9 @@
 			var dateDim = ndx.dimension(function(d) {return d.date;});
 			var minDate = dateDim.bottom(1)[0].date;
 			var maxDate = dateDim.top(1)[0].date;
-
+			
+			var dimPtDay = ndx.dimension(function(d) {return d.pt_days_id;});
+			var totPtDay = dimPtDay.size();
 
 		//var yearRingChart   = dc.pieChart("#chart-ring-year");
 		var yearDim  = ndx.dimension(function(d) {return +d.Year;});
@@ -56,14 +58,15 @@
 		//	.group(year_total)
 		//	.innerRadius(30);
 		dTable
-		 	.dimension(dateDim)
+		 	.dimension(dimPtDay)
 		        .group(function (d) {
 		            return d.dd.getFullYear();
 		        })
 			.width(768)
 			.height(480)
 			.columns([
-            			'date'
+            			'date',
+            			'totPtDay'
         		])
 		dc.renderAll();
         	});
